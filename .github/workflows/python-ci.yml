@@ -6,6 +6,7 @@ on:  # esto nos indica cuando debemos ejecutar un overflows push o pull
 
 permissions : # basico, que tenga permisos de leer el conteido (leer mi github)
   contents : read
+  packages : write
 
 jobs: # que tiene que ejecutar esta ci/cd o tambien este pipeline
   build_test: # este es el nombre de de los trabajos que se realizaran (modificalo a algo ams descriptivo)
@@ -37,6 +38,7 @@ jobs: # que tiene que ejecutar esta ci/cd o tambien este pipeline
         registry: ghcr.io
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
+
     - name: Build and push
       uses: docker/build-push-action@v6
       with:
