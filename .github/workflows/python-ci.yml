@@ -41,5 +41,5 @@ jobs: # que tiene que ejecutar esta ci/cd o tambien este pipeline
       uses: docker/build-push-action@v6
       with:
         push: true
-        tags: ghcr.io/KevinRBW/CI-CD-Prueba-python:latest
+        tags: ghcr.io/kevinrbw/ci-cd-prueba-python:latest
         
