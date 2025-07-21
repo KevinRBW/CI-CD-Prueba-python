@@ -26,4 +26,5 @@ jobs: # que tiene que ejecutar esta ci/cd o tambien este pipeline
         pip install -r requirements.txt
 
     - name: Ejecutar pruebas
-      run: pytest
+      run: | 
+        pytest
