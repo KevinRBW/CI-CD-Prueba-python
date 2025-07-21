@@ -25,6 +25,8 @@ jobs: # que tiene que ejecutar esta ci/cd o tambien este pipeline
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: 4- Ejecutar pruebas con pytest ==
-      run: | 
-        pytest
+    - name: 4- Ejecutar linting ==
+      run: ruff check .
+
+    - name: 5- Ejecutar pruebas con pytest ==
+      run: pytest
