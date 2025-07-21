@@ -1,17 +1,22 @@
-name: Python CI
+name: Python CI #nombre de nuestro flujo de trabajo "workflows"
 
-on: [push, pull_request]
+on:  # esto nos indica cuando debemos ejecutar un overflows push o pull
+  push:
+    branches : ["master"]
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+permissions : # basico, que tenga permisos de leer el conteido (leer mi github)
+  contents : read
+
+jobs: # que tiene que ejecutar esta ci/cd o tambien este pipeline
+  test_and_build: # este es el nombre de de los trabajos que se realizaran (modificalo a algo ams descriptivo)
+    runs-on: ubuntu-20.04
 
     steps:
-    - name: Clonar repo
-      uses: actions/checkout@v3
+    # - name: Clonar repo
+    - uses: actions/checkout@v4
 
     - name: Configurar Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v3
       with:
         python-version: '3.11'
 
