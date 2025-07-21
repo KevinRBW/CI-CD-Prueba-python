@@ -42,3 +42,4 @@ jobs: # que tiene que ejecutar esta ci/cd o tambien este pipeline
       with:
         push: true
         tags: user/app:latest
+        
