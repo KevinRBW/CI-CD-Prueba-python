@@ -2,7 +2,7 @@ name: Python CI #nombre de nuestro flujo de trabajo "workflows"
 
 on:  # esto nos indica cuando debemos ejecutar un overflows push o pull
   push:
-    branches : ["master"]
+    branches : ["main"]
 
 permissions : # basico, que tenga permisos de leer el conteido (leer mi github)
   contents : read
