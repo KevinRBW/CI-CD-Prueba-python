@@ -8,7 +8,7 @@ permissions : # basico, que tenga permisos de leer el conteido (leer mi github)
   contents : read
 
 jobs: # que tiene que ejecutar esta ci/cd o tambien este pipeline
-  test_and_build: # este es el nombre de de los trabajos que se realizaran (modificalo a algo ams descriptivo)
+  build: # este es el nombre de de los trabajos que se realizaran (modificalo a algo ams descriptivo)
     runs-on: ubuntu-20.04
 
     steps:
